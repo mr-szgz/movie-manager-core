@@ -1,0 +1,68 @@
+{
+  "name": "@movie-manager/cli",
+  "description": "movie manager",
+  "version": "0.0.1",
+  "author": "Blake E @electblake",
+  "bin": {
+    "mm": "./bin/run"
+  },
+  "bugs": "https://github.com/electblake/mm-cli/issues",
+  "dependencies": {
+    "@oclif/command": "^1.5.19",
+    "@oclif/config": "^1.13.3",
+    "@oclif/plugin-help": "^2.2.1",
+    "chalk": "^3.0.0",
+    "cli-ux": "^5.3.3",
+    "ffprobe": "^1.1.0",
+    "seconds2timecode": "0.0.2",
+    "shelljs": "^0.8.3",
+    "term-img": "^4.1.0",
+    "terminal-image": "^0.2.0",
+    "ts-md5": "^1.2.7",
+    "tslib": "^1.10.0"
+  },
+  "devDependencies": {
+    "@oclif/dev-cli": "^1.22.2",
+    "@types/chalk": "^2.2.0",
+    "@types/ffmpeg": "^1.0.0",
+    "@types/node": "^10.17.5",
+    "@types/shelljs": "^0.8.6",
+    "eslint": "^5.16.0",
+    "eslint-config-oclif": "^3.1.0",
+    "eslint-config-oclif-typescript": "^0.1.0",
+    "globby": "^10.0.1",
+    "ts-node": "^8.5.2",
+    "typescript": "^3.7.2"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/bin",
+    "/lib",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json"
+  ],
+  "homepage": "https://github.com/electblake/mm-cli",
+  "keywords": [
+    "oclif"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "oclif": {
+    "commands": "./lib/commands",
+    "bin": "mm",
+    "plugins": [
+      "@oclif/plugin-help"
+    ]
+  },
+  "repository": "electblake/mm-cli",
+  "scripts": {
+    "postpack": "rm -f oclif.manifest.json",
+    "posttest": "eslint . --ext .ts --config .eslintrc",
+    "prepack": "rm -rf lib && tsc -b && oclif-dev manifest && oclif-dev readme",
+    "test": "echo NO TESTS",
+    "version": "oclif-dev readme && git add README.md"
+  },
+  "types": "lib/index.d.ts"
+}

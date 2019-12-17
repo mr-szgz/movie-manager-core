@@ -1,0 +1,26 @@
+{
+  "name": "@movie-manager/desktop",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "Blake E <electblake@gmail.com>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "lib/desktop.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "dependencies": {
+    "electron": "^7.1.5"
+  },
+  "devDependencies": {
+    "@typescript-eslint/parser": "^2.12.0",
+    "typescript": "^3.7.3"
+  }
+}
