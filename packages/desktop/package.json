@@ -17,7 +17,7 @@
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
-    "electron": "^7.1.5"
+    "electron": "^15.5.5"
   },
   "devDependencies": {
     "@typescript-eslint/parser": "^2.12.0",
